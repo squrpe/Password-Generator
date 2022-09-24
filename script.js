@@ -22,27 +22,42 @@ function generatePassword() {
 
   var generatePassword = " ";
 
-  var choiceArr = [{lowerChoice}, {upperChoice}, {numChoice}, {symChoice}];
+  var countChoices = lowerChoice + upperChoice + numChoice + symChoice;
+
+  var choiceArr = [{lowerChoice}, {upperChoice}, {numChoice}, {symChoice}].filter(item => Object.values(item)[0]);
   console.log("Arr: ", choiceArr);
 
-  var trueArr = trueValues(choiceArr);
-  console.log("Arr: ", trueArr);
+  if(countChoices === 0) {
+    return " ";
+  }
 
+  for (var i = 0; i < lengthChoice; i+=countChoices) {
+    choiceArr.forEach(type => { })
+
+  }
+
+  
   return "placeholder";
 }
 
-function trueValues(array) {
+//function trueValues(array) {
 
-  console.log("Arr: ", array);
+  //console.log("Arr: ", array);
 
-  var trueChoices;
+  //var trueChoices;
 
-  for (var i = 0; i < array.length; i++) { 
-    if (array[i] === true) {
-      //array.push(i)(array); ?
-    }
-  }
+  //for (const key in array) {
+    //if (array.(key)) {
+     //console.log(`${key}: ${array[key]}`);
+    //}
+  //}
 
-  return trueChoices;
-}
+
+  //for (var i = 0; i < array.length; i++) {
+    //if (array[i] === true)
+
+  //}
+
+  //return trueChoices;
+
 
