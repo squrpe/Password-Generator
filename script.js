@@ -7,12 +7,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Generate Password function that prompts the user
 function generatePassword() {
 
   var lower = "abcdefghijklmnopqrstuvwxyz";
