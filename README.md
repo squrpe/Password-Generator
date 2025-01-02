@@ -21,12 +21,12 @@ Reusing a similar password for every application will pose a huge risk to your o
 Below is an example of how you can clone the project onto your own device:
 1. Clone the repository within a new terminal
     ```md
-        git clone https://github.com/squrpe/bootcamp-week3challenge.git
+        git clone https://github.com/squrpe/Password-Generator.git
     ```
 
 ## Usage
 
-To access the project's application follow this link: https://squrpe.github.io/bootcamp-week3challenge/ or open within your chosen IDE or browser
+To access the project's application follow this link: https://squrpe.github.io/Password-Generator/ or open within your chosen IDE or browser
 
 Below is what the application looks like:
 
@@ -44,6 +44,6 @@ Base Code & Project Idea: The University of Adelaide Coding Bootcamp
 
 Lara Nicole - [grockelara@gmail.com](grockelara@gmail.com)
 
-Project Link - https://github.com/squrpe/bootcamp-week3challenge
+Project Link - https://github.com/squrpe/Password-Generator
 
-Project Deployment - https://squrpe.github.io/bootcamp-week3challenge/
+Project Deployment - https://squrpe.github.io/Password-Generator/
