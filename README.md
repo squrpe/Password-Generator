@@ -26,7 +26,7 @@ Below is an example of how you can clone the project onto your own device:
 
 ## Usage
 
-To access the project's application follow this link: https://squrpe.github.io/Password-Generator/ or open within your chosen IDE or browser
+To access the project's application follow this link https://squrpe.github.io/Password-Generator/ or open within your chosen IDE or browser
 
 Below is what the application looks like:
 
