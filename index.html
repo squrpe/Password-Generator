@@ -10,7 +10,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>Password Generator</h1>
+      <!-- <h1>Password Generator</h1> -->
     </header>
     <div class="card">
       <div class="card-header">
@@ -24,8 +24,10 @@
           aria-label="Generated Password"
         ></textarea>
         <form id="password-options">
+          <div id="lengthinput">
           <label for="length">Password Length:</label>
           <input type="number" id="length" name="length" min="8" max="128" value="12" />
+          </div>
 
           <div>
             <label><input type="checkbox" id="lowercase" checked /> Include Lowercase</label>
@@ -44,3 +46,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Lara Nicole - 2025 -->
