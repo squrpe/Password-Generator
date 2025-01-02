@@ -10,6 +10,7 @@ Reusing a similar password for every application will pose a huge risk to your o
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [License](#license)
 
 ## Built With
 - HTML
@@ -38,8 +39,6 @@ To generate a new password, click the generate password button and follow the pr
 
 Base Code & Project Idea: The University of Adelaide Coding Bootcamp
 
----
-
 ## Contact
 
 Lara Nicole - [grockelara@gmail.com](grockelara@gmail.com)
@@ -47,3 +46,7 @@ Lara Nicole - [grockelara@gmail.com](grockelara@gmail.com)
 Project Link - https://github.com/squrpe/Password-Generator
 
 Project Deployment - https://squrpe.github.io/Password-Generator/
+
+## License
+
+Distributed under the MIT License. See LICENSE.txt for more information.
