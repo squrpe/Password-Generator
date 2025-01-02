@@ -10,6 +10,7 @@ Reusing a similar password for every application will pose a huge risk to your o
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Contact](#contact)
 - [License](#license)
 
 ## Built With
