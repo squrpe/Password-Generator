@@ -1,74 +1,72 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+// Lara Nicole - Updated 2025
+
+// Query selectors for the inputs
+const generateBtn = document.querySelector("#generate");
+const copyBtn = document.querySelector("#copy");
+const passwordText = document.querySelector("#password");
+const lengthInput = document.querySelector("#length");
+const lowercaseInput = document.querySelector("#lowercase");
+const uppercaseInput = document.querySelector("#uppercase");
+const numbersInput = document.querySelector("#numbers");
+const symbolsInput = document.querySelector("#symbols");
+
+// Characters sets
+const lower = "abcdefghijklmnopqrstuvwxyz";
+const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const number = "0123456789";
+const symbol = "~!@#$%^&*()_+{}:?><;.,";
+  
+// Generate Password function
+function generatePassword() {
+  const length = parseInt(lengthInput.value, 10);
+  const includeLowercase = lowercaseInput.checked;
+  const includeUppercase = uppercaseInput.checked;
+  const includeNumbers = numbersInput.checked;
+  const includeSymbols = symbolsInput.checked;
+
+  // Validate inputs
+  if (isNaN(length) || length < 8 || length > 128) {
+    alert("Password length must be a number between 8 and 128.");
+    return '';
+  }
+  if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols) {
+    alert("You must select at least one character type.");
+    return '';
+  }
+
+  // Build the usable character set
+  let usableCharacters = "";
+  if (includeLowercase) usableCharacters += lower;
+  if (includeUppercase) usableCharacters += upper;
+  if (includeNumbers) usableCharacters += number;
+  if (includeSymbols) usableCharacters += symbol;
+
+  // Generate the password
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += usableCharacters[Math.floor(Math.random() * usableCharacters.length)];
+  }
+
+  return password;
+}
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
+  const password = generatePassword();
   passwordText.value = password;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// Generate Password function that prompts the user
-function generatePassword() {
-
-  var lower = "abcdefghijklmnopqrstuvwxyz";
-  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var number = "0123456789";
-  var symbol = "~!@#$%^&*()_+{}:?><;.,";
-
-  var usableCharacters = " ";
-  var password = " ";
-  
-  var lengthChoice = 0;
-  lengthChoice = window.prompt("How long do you want your password? (Between 8 and 128)");
-
-  if (lengthChoice >= 8 && lengthChoice <= 128) {
-    console.log(lengthChoice);
-    } else {
-    alert("Please be sure your response is a number between 8 and 128.")
-    return ' ';
+// Copy password to clipboard
+function copyToClipboard() {
+  if (passwordText.value) {
+    navigator.clipboard.writeText(passwordText.value).then(() => {
+      alert("Password copied to clipboard!");
+    });
+  } else {
+    alert("No password to copy!");
   }
-
-  var lowerChoice = window.confirm("Do you want to include Lowercase Letters?");
-  if (lowerChoice) {
-    usableCharacters += lower;
-    console.log(usableCharacters);
-  }
-
-  var upperChoice = window.confirm("Do you want to include Uppercase Letters?");
-  if (upperChoice) {
-    usableCharacters += upper;
-    console.log(usableCharacters);
-  }
-
-  var numChoice = window.confirm("Do you want to include Numbers?");
-  if (numChoice) {
-    usableCharacters += number;
-    console.log(usableCharacters);
-  }
-
-  var symChoice = window.confirm("Do you want to include Special Symbols?");
-  if (symChoice) {
-    usableCharacters += symbol;
-    console.log(usableCharacters);
-  }
-
-  if (!lowerChoice && !upperChoice && !numChoice && !symChoice){
-    alert("You must include at least one set of characters.")
-    return ' ';
-    }
-
-  for (var i = 0; i < lengthChoice; i++) {
-
-    password += usableCharacters[Math.floor(Math.random() * usableCharacters.length)];
-
-  };
-  
-  return password;
-
 }
 
+// Event listeners
+generateBtn.addEventListener("click", writePassword);
+copyBtn.addEventListener("click", copyToClipboard);
