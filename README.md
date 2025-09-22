@@ -42,11 +42,13 @@ Base Code & Project Idea: The University of Adelaide Coding Bootcamp
 
 ## Contact
 
-Lara Nicole - [grockelara@gmail.com](grockelara@gmail.com)
+Lara Grocke - [grockelara@gmail.com](grockelara@gmail.com)
 
 Project Link - https://github.com/squrpe/Password-Generator
 
 Project Deployment - https://squrpe.github.io/Password-Generator/
+
+LinkedIn - https://www.linkedin.com/in/laragrocke001
 
 ## License
 
